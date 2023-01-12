@@ -1,0 +1,41 @@
+[
+  {
+    "model": "artist_collective_ink_serverapi",
+    "pk": 1,
+    "fields": {
+      "name": "Yogi Barrett",
+      "instagram": "yogi_barrett",
+      "artworkPhoto": "www.instagram.com/a_photo",
+      "shopId": 1,
+      "styleId": 1,
+      "id": 1,
+      "uid": 1
+    }
+  },
+  {
+    "model": "artist_collective_ink_serverapi",
+    "pk": 2,
+    "fields": {
+      "name": "Kirk George",
+      "instagram": "killingxjacob",
+      "artworkPhoto": "www.instagram.com/another_photo",
+      "shopId": 2,
+      "styleId": 2,
+      "id": 2,
+      "uid": 1
+    }
+  },
+  {
+    "model": "artist_collective_ink_serverapi",
+    "pk": 3,
+    "fields": {
+      "name": "Evan Davis",
+      "instagram": "evandavistattoo",
+      "artworkPhoto": "www.instagram.com/a_new_photo",
+      "shopId": 3,
+      "styleId": 3,
+      "id": 3,
+      "uid": 1
+    }
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "model": "artist_collective_ink_serverapi",
+    "pk": 1,
+    "fields": {
+      "uid": 1,
+      "first_name": "Emily",
+      "last_name": "Stroud",
+      "email": "anemail@g.com"
+    }
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "model": "artist_collective_ink_serverapi",
+    "pk": 1,
+    "fields": {
+      "name": "traditional",
+      "id": 1,
+      "uid": 1
+    }
+  },
+  {
+    "model": "artist_collective_ink_serverapi",
+    "pk": 2,
+    "fields": {
+      "name": "black & grey",
+      "id": 2,
+      "uid": 1
+    }
+  },
+  {
+    "model": "artist_collective_ink_serverapi",
+    "pk": 3,
+    "fields": {
+      "name": "realism",
+      "id": 3,
+      "uid": 1
+    }
+  }
+]

@@ -11,5 +11,31 @@
       "id": 1,
       "uid": 1
     }
+  },
+  {
+    "model": "artist_collective_ink_serverapi.post",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "name": "A Newer Shop",
+      "location": "Here, & Now",
+      "website": "www.tatty.com",
+      "photo": "www.google.com/another_photo",
+      "id": 2,
+      "uid": 1
+    }
+  },
+  {
+    "model": "artist_collective_ink_serverapi.post",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "name": "The Newest Shop",
+      "location": "There, Now",
+      "website": "www.utatt.com",
+      "photo": "www.google.com/a_new_photo",
+      "id": 3,
+      "uid": 1
+    }
   }
 ]
