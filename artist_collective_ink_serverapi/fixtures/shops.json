@@ -1,0 +1,15 @@
+[
+  {
+    "model": "artist_collective_ink_serverapi.post",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "name": "A New Shop",
+      "location": "Here, Now",
+      "website": "www.tatt.com",
+      "photo": "www.google.com/a_photo",
+      "id": 1,
+      "uid": 1
+    }
+  }
+]
