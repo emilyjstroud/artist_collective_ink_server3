@@ -18,18 +18,27 @@ class ArtistView(ViewSet):
   
   def create(self, request):
     
-    """ More info needs to go here """
-    
     artist = Artist.objects.create(
-      """ And here """
+      name = request.data["name"],
+      instagram = request.data["instagram"],
+      artworkPhoto = request.data["artworkPhoto"],
+      shopId = request.data["shopId"],
+      styleId = request.data["styleId"],
+      id = request.data["id"],
+      uid = request.data["uid"]
     )
     serializer = ArtistSerializer(artist)
     return Response(serializer.data)
 
   def update(self, request, pk):
     artist = Artist.objects.get(pk=pk)
-    
-    """ More info needs to go here """
+    artist.name = request.data["name"]
+    artist.instagram = request.data["instagram"]
+    artist.artworkPhoto = request.data["artworkPhoto"]
+    artist.shopId = request.data["shopId"]
+    artist.styleId = request.data["styleId"]
+    artist.id = request.data["id"]
+    artist.uid = request.data["uid"]
     
     artist.save()
     
