@@ -62,5 +62,5 @@ class Migration(migrations.Migration):
         model_name='shop',
         name='user',
         field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='artist_collective_ink_serverapi.user')
-      )
+      ),
     ]
