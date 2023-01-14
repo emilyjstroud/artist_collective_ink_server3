@@ -3,24 +3,24 @@
     "model": "artist_collective_ink_serverapi",
     "pk": 1,
     "fields": {
-      "artist_id": 1,
-      "style_id": 1
+      "artist": 1,
+      "style": 1
     }
   },
   {
     "model": "artist_collective_ink_serverapi",
     "pk": 2,
     "fields": {
-      "artist_id": 2,
-      "style_id": 2
+      "artist": 2,
+      "style": 2
     }
   },
   {
     "model": "artist_collective_ink_serverapi",
     "pk": 3,
     "fields": {
-      "artist_id": 3,
-      "style_id": 3
+      "artist": 3,
+      "style": 3
     }
   }
 ]
