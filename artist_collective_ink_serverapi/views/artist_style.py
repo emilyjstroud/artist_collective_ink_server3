@@ -2,17 +2,17 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from artist_collective_ink_serverapi.models import ArtistStyle, Artist, Style
+from artist_collective_ink_serverapi.models import Artist_Style, Artist, Style
 
 class ArtistStyleView(ViewSet):
   
   def retrieve(self, request, pk):
-      artist_style = ArtistStyle.objects.get(pk=pk)
+      artist_style = Artist_Style.objects.get(pk=pk)
       serializer = ArtistStyleSerializer(artist_style)
       return Response(serializer.data)
   
   def list(self, request):
-      artist_styles = ArtistStyle.objects.all()
+      artist_styles = Artist_Style.objects.all()
       serializer = ArtistStyleSerializer(artist_styles, many = True)
       return Response(serializer.data)
     
@@ -20,7 +20,7 @@ class ArtistStyleView(ViewSet):
       artist = Artist.objects.get(pk=request.data["artist"])
       style = Style.objects.get(pk=request.data["style"])
       
-      artist_style = ArtistStyle.objects.create(
+      artist_style = Artist_Style.objects.create(
         artist = artist,
         style = style
       )
@@ -28,7 +28,7 @@ class ArtistStyleView(ViewSet):
       return Response(serializer.data)
     
   def update(self, request, pk):
-      artist_style = ArtistStyle.objects.get(pk=pk)
+      artist_style = Artist_Style.objects.get(pk=pk)
       
       artist = Artist.objects.get(pk=request.data["artist"])
       style = Style.objects.get(pk=request.data["style"])
@@ -40,13 +40,13 @@ class ArtistStyleView(ViewSet):
       return Response(None, status=status.HTTP_204_NO_CONTENT)
     
   def destroy(self, request, pk):
-      artist_style = ArtistStyle.objects.get(pk=pk)
+      artist_style = Artist_Style.objects.get(pk=pk)
       artist_style.delete()
       return Response(None, status=status.HTTP_204_NO_CONTENT)
     
 class ArtistStyleSerializer(serializers.ModelSerializer):
   
   class Meta:
-    model = ArtistStyle
-    fields = ('artistId', 'styleId', 'id')
+    model = Artist_Style
+    fields = ('artist', 'style', 'id')
     depth = 1

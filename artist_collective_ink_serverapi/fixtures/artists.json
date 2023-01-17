@@ -7,9 +7,7 @@
       "instagram": "yogi_barrett",
       "artworkPhoto": "www.instagram.com/a_photo",
       "shop": 1,
-      "style": 1,
-      "id": 1,
-      "uid": 1
+      "style": 1
     }
   },
   {
@@ -20,9 +18,7 @@
       "instagram": "killingxjacob",
       "artworkPhoto": "www.instagram.com/another_photo",
       "shop": 2,
-      "style": 2,
-      "id": 2,
-      "uid": 1
+      "style": 2
     }
   },
   {
@@ -33,9 +29,7 @@
       "instagram": "evandavistattoo",
       "artworkPhoto": "www.instagram.com/a_new_photo",
       "shop": 3,
-      "style": 3,
-      "id": 3,
-      "uid": 1
+      "style": 3
     }
   }
 ]

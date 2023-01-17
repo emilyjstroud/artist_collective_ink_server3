@@ -53,5 +53,5 @@ class ArtistSerializer(serializers.ModelSerializer):
   
   class Meta:
     model = Artist
-    fields = ('name', 'instagram', 'artworkPhoto', 'shopId', 'styleId', 'id', 'uid')
+    fields = ('name', 'instagram', 'artworkPhoto', 'shop', 'style', 'id', 'uid')
     depth = 1

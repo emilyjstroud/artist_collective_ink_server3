@@ -21,7 +21,7 @@ Including another URLconf
 """
 
 router = routers.DefaultRouter(trailing_slash=False)
-router.register(r'useers', UserView, 'user')
+router.register(r'users', UserView, 'user')
 router.register(r'shops', ShopView, 'shop')
 router.register(r'artists', ArtistView, 'artist')
 router.register(r'styles', StyleView, 'style')

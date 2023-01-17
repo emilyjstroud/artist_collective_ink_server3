@@ -30,7 +30,8 @@ class UserView(ViewSet):
       first_name = request.data["first_name"],
       last_name = request.data["last_name"],
       email = request.data["email"],
-      uid = request.data["uid"]
+      uid = request.data["uid"],
+      id = request.data["id"]
     )
     serializer = UserSerializer(user)
     return Response(serializer.data)
@@ -43,6 +44,7 @@ class UserView(ViewSet):
     user.last_name = request.data["last_name"]
     user.email = request.data["email"]
     user.uid = request.data["uid"]
+    user.id = request.data["id"]
     user.save()
     
     return Response(None, status=status.HTTP_204_NO_CONTENT)
