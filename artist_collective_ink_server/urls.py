@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
 from rest_framework import routers
 from artist_collective_ink_serverapi.views import register_user, check_user
 from artist_collective_ink_serverapi.views import UserView, ShopView, ArtistView, StyleView, ArtistStyleView
@@ -33,4 +34,5 @@ urlpatterns = [
     # Requests to http://localhost:8000/checkuser will be routed to the login_user function
         path('checkuser', check_user),
         path('admin/', admin.site.urls),
+        path('', include(router.urls)),
 ]

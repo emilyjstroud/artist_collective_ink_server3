@@ -39,5 +39,5 @@ class StyleSerializer(serializers.ModelSerializer):
   
   class Meta:
       model = Style
-      fields = ('name', 'id', 'uid')
+      fields = ('name', 'id')
       depth = 1

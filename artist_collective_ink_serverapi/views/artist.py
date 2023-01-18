@@ -22,10 +22,9 @@ class ArtistView(ViewSet):
       name = request.data["name"],
       instagram = request.data["instagram"],
       artworkPhoto = request.data["artworkPhoto"],
-      shopId = request.data["shopId"],
-      styleId = request.data["styleId"],
-      id = request.data["id"],
-      uid = request.data["uid"]
+      shop = request.data["shop"],
+      style = request.data["style"],
+      id = request.data["id"]
     )
     serializer = ArtistSerializer(artist)
     return Response(serializer.data)
@@ -35,10 +34,9 @@ class ArtistView(ViewSet):
     artist.name = request.data["name"]
     artist.instagram = request.data["instagram"]
     artist.artworkPhoto = request.data["artworkPhoto"]
-    artist.shopId = request.data["shopId"]
-    artist.styleId = request.data["styleId"]
+    artist.shop= request.data["shop"]
+    artist.style= request.data["style"]
     artist.id = request.data["id"]
-    artist.uid = request.data["uid"]
     
     artist.save()
     
@@ -53,5 +51,5 @@ class ArtistSerializer(serializers.ModelSerializer):
   
   class Meta:
     model = Artist
-    fields = ('name', 'instagram', 'artworkPhoto', 'shop', 'style', 'id', 'uid')
+    fields = ('name', 'instagram', 'artworkPhoto', 'shop', 'style', 'id')
     depth = 1
