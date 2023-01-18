@@ -1,6 +1,6 @@
 [
   {
-    "model": "artist_collective_ink_serverapi",
+    "model": "artist_collective_ink_serverapi.user",
     "pk": 1,
     "fields": {
       "uid": 1,

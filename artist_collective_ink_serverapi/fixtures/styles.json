@@ -1,20 +1,20 @@
 [
   {
-    "model": "artist_collective_ink_serverapi",
+    "model": "artist_collective_ink_serverapi.style",
     "pk": 1,
     "fields": {
       "name": "traditional"
     }
   },
   {
-    "model": "artist_collective_ink_serverapi",
+    "model": "artist_collective_ink_serverapi.style",
     "pk": 2,
     "fields": {
       "name": "black & grey"
     }
   },
   {
-    "model": "artist_collective_ink_serverapi",
+    "model": "artist_collective_ink_serverapi.style",
     "pk": 3,
     "fields": {
       "name": "realism"

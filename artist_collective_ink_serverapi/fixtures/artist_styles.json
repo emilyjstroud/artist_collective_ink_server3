@@ -1,6 +1,6 @@
 [
   {
-    "model": "artist_collective_ink_serverapi",
+    "model": "artist_collective_ink_serverapi.artist_style",
     "pk": 1,
     "fields": {
       "artist": 1,
@@ -8,7 +8,7 @@
     }
   },
   {
-    "model": "artist_collective_ink_serverapi",
+    "model": "artist_collective_ink_serverapi.artist_style",
     "pk": 2,
     "fields": {
       "artist": 2,
@@ -16,7 +16,7 @@
     }
   },
   {
-    "model": "artist_collective_ink_serverapi",
+    "model": "artist_collective_ink_serverapi.artist_style",
     "pk": 3,
     "fields": {
       "artist": 3,

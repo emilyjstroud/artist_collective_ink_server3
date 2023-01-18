@@ -1,6 +1,6 @@
 [
   {
-    "model": "artist_collective_ink_serverapi",
+    "model": "artist_collective_ink_serverapi.artist",
     "pk": 1,
     "fields": {
       "name": "Yogi Barrett",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "model": "artist_collective_ink_serverapi",
+    "model": "artist_collective_ink_serverapi.artist",
     "pk": 2,
     "fields": {
       "name": "Kirk George",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "model": "artist_collective_ink_serverapi",
+    "model": "artist_collective_ink_serverapi.artist",
     "pk": 3,
     "fields": {
       "name": "Evan Davis",
