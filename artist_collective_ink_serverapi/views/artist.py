@@ -2,7 +2,7 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from artist_collective_ink_serverapi.models import Artist
+from artist_collective_ink_serverapi.models import Artist, Shop, Style
 
 class ArtistView(ViewSet):
   
@@ -18,25 +18,30 @@ class ArtistView(ViewSet):
   
   def create(self, request):
     
+    shop = Shop.objects.get(pk=request.data["shop"])
+    style = Style.objects.get(pk=request.data["style"])
+    
     artist = Artist.objects.create(
       name = request.data["name"],
       instagram = request.data["instagram"],
       artworkPhoto = request.data["artworkPhoto"],
-      shop = request.data["shop"],
-      style = request.data["style"],
-      id = request.data["id"]
+      shop = shop,
+      style = style
     )
     serializer = ArtistSerializer(artist)
     return Response(serializer.data)
 
   def update(self, request, pk):
     artist = Artist.objects.get(pk=pk)
+    
+    shop = Shop.objects.get(pk=request.data["shop"])
+    style = Style.objects.get(pk=request.data["style"])
+    
     artist.name = request.data["name"]
     artist.instagram = request.data["instagram"]
     artist.artworkPhoto = request.data["artworkPhoto"]
-    artist.shop= request.data["shop"]
-    artist.style= request.data["style"]
-    artist.id = request.data["id"]
+    artist.shop = shop
+    artist.style = style
     
     artist.save()
     
