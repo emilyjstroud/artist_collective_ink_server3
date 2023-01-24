@@ -56,5 +56,5 @@ class ShopSerializer(serializers.ModelSerializer):
   
   class Meta:
     model = Shop
-    fields = ('name', 'location', 'website', 'photo', 'id')
+    fields = ('name', 'location', 'website', 'photo', 'id', 'user')
     depth = 1

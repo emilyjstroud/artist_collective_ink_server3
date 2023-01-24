@@ -4,6 +4,7 @@
     "pk": 1,
     "fields": {
       "name": "Yogi Barrett",
+      "location": "Senoia, GA",
       "instagram": "yogi_barrett",
       "artworkPhoto": "www.instagram.com/a_photo",
       "shop": 1,
@@ -15,6 +16,7 @@
     "pk": 2,
     "fields": {
       "name": "Kirk George",
+      "location": "Nashville, TN",
       "instagram": "killingxjacob",
       "artworkPhoto": "www.instagram.com/another_photo",
       "shop": 2,
@@ -26,6 +28,7 @@
     "pk": 3,
     "fields": {
       "name": "Evan Davis",
+      "location": "Nashville, TN",
       "instagram": "evandavistattoo",
       "artworkPhoto": "www.instagram.com/a_new_photo",
       "shop": 3,
