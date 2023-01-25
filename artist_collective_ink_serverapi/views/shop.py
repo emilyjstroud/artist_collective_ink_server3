@@ -31,6 +31,7 @@ class ShopView(ViewSet):
       location = request.data["location"],
       website = request.data["website"],
       photo = request.data["photo"],
+      user = user
     )
     serializer = ShopSerializer(shop)
     return Response(serializer.data)
@@ -56,5 +57,5 @@ class ShopSerializer(serializers.ModelSerializer):
   
   class Meta:
     model = Shop
-    fields = ('name', 'location', 'website', 'photo', 'id', 'user')
+    fields = ('id', 'user', 'name', 'location', 'website', 'photo')
     depth = 1
