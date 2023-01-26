@@ -3,6 +3,8 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from artist_collective_ink_serverapi.models import Shop, User
+# from rest_framework.decorators import action
+# from rest_framework import generics
 
 class ShopView(ViewSet):
   
@@ -13,6 +15,11 @@ class ShopView(ViewSet):
       return Response(serializer.data)
     
   def list(self, request):
+    
+      artist = request.query_params.get('artist', None)
+      if artist is not None:
+        shops=shops.filter(artist_id=artist)
+      serializer = ShopSerializer(shops, many=True)
     
       shops = Shop.objects.all()
       
@@ -59,3 +66,9 @@ class ShopSerializer(serializers.ModelSerializer):
     model = Shop
     fields = ('id', 'user', 'name', 'location', 'website', 'photo')
     depth = 1
+
+# class ArtistShoptView(generics.ListCreateAPIView):
+#   serializer_Class = ShopSerializer
+#   def get_queryset(self):
+#     artist_id = self.kwargs('artist_id')
+#     return Shop.objects.filter(artist__id=artist_id)

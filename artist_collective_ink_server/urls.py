@@ -3,7 +3,7 @@ from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
 from artist_collective_ink_serverapi.views import register_user, check_user
-from artist_collective_ink_serverapi.views import UserView, ShopView, ArtistView, StyleView, ArtistStyleView
+from artist_collective_ink_serverapi.views import UserView, ShopView, ArtistView, StyleView, ArtistStyleView, ShopArtistView
 
 """artist_collective_ink_server URL Configuration
 
@@ -35,4 +35,5 @@ urlpatterns = [
         path('checkuser', check_user),
         path('admin/', admin.site.urls),
         path('', include(router.urls)),
+        path('artistshops</int:artist_id>/', ShopArtistView.as_view(), name='artistshops' )
 ]
