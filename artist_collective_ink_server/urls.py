@@ -35,5 +35,5 @@ urlpatterns = [
         path('checkuser', check_user),
         path('admin/', admin.site.urls),
         path('', include(router.urls)),
-        path('artistshops</int:artist_id>/', ShopArtistView.as_view(), name='artistshops' )
+        path('shop-artists/<int:post_id>/', ShopArtistView.as_view(), name='shops')
 ]

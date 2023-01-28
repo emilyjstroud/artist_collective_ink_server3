@@ -2,7 +2,7 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from artist_collective_ink_serverapi.models import Artist, Shop, Style
+from artist_collective_ink_serverapi.models import Artist, Shop, Style, User
 from rest_framework.decorators import action
 from rest_framework import generics
 
@@ -15,15 +15,22 @@ class ArtistView(ViewSet):
   
   def list(self, request):
     artists = Artist.objects.all()
+    
+    # shop = request.query_params.get(shop, None)
+    # if shop is not None:
+    #     artists = artists.filter(shop_id=shop)
     serializer = ArtistSerializer(artists, many=True)
+    
     return Response(serializer.data)
   
   def create(self, request):
     
+    # user = User.objects.get(uid = request.data["user"])
     shop = Shop.objects.get(pk=request.data["shop"])
     style = Style.objects.get(pk=request.data["style"])
     
     artist = Artist.objects.create(
+      # user = user,
       shop = shop,
       style = style,
       name = request.data["name"],
@@ -35,11 +42,12 @@ class ArtistView(ViewSet):
     return Response(serializer.data)
 
   def update(self, request, pk):
-    artist = Artist.objects.get(pk=pk)
+    # artist = Artist.objects.get(pk=pk)
     
     shop = Shop.objects.get(pk=request.data["shop"])
     style = Style.objects.get(pk=request.data["style"])
     
+    artist = Artist.objects.get(pk=pk)
     artist.shop = shop
     artist.style = style
     artist.name = request.data["name"]

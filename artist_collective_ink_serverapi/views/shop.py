@@ -16,10 +16,10 @@ class ShopView(ViewSet):
     
   def list(self, request):
     
-      artist = request.query_params.get('artist', None)
-      if artist is not None:
-        shops=shops.filter(artist_id=artist)
-      serializer = ShopSerializer(shops, many=True)
+      # artist = request.query_params.get('artist', None)
+      # if artist is not None:
+      #   shops=shops.filter(artist_id=artist)
+      # serializer = ShopSerializer(shops, many=True)
     
       shops = Shop.objects.all()
       
