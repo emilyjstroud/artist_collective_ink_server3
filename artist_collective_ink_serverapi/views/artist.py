@@ -16,9 +16,9 @@ class ArtistView(ViewSet):
   def list(self, request):
     artists = Artist.objects.all()
     
-    # shop = request.query_params.get(shop, None)
-    # if shop is not None:
-    #     artists = artists.filter(shop_id=shop)
+    shop = request.query_params.get('shop', None)
+    if shop is not None:
+        artists = artists.filter(shop_id=shop)
     serializer = ArtistSerializer(artists, many=True)
     
     return Response(serializer.data)
@@ -31,12 +31,12 @@ class ArtistView(ViewSet):
     
     artist = Artist.objects.create(
       # user = user,
-      shop = shop,
-      style = style,
       name = request.data["name"],
       location = request.data["location"],
       instagram = request.data["instagram"],
       artworkPhoto = request.data["artworkPhoto"],
+      shop = shop,
+      style = style,
     )
     serializer = ArtistSerializer(artist)
     return Response(serializer.data)
