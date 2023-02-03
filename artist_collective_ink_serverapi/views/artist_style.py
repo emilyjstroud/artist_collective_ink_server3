@@ -13,6 +13,11 @@ class ArtistStyleView(ViewSet):
   
   def list(self, request):
       artist_styles = Artist_Style.objects.all()
+      
+      artist = request.query_params.get('artist', None)
+      if artist is not None:
+        artist_styles.filter(artist_id=artist)
+      
       serializer = ArtistStyleSerializer(artist_styles, many = True)
       return Response(serializer.data)
     

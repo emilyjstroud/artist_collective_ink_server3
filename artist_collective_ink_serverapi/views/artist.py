@@ -41,7 +41,7 @@ class ArtistView(ViewSet):
       instagram = request.data["instagram"],
       artworkPhoto = request.data["artworkPhoto"],
       shop = shop,
-      style = style,
+      style = style
       # user = user,
     )
     serializer = ArtistSerializer(artist)

@@ -13,6 +13,7 @@ class StyleView(ViewSet):
   
   def list(self, request):
       styles = Style.objects.all()
+      
       serializer = StyleSerializer(styles, many = True)
       return Response(serializer.data)
     
