@@ -32,13 +32,14 @@ class ShopView(ViewSet):
   def create(self, request):
     
     user = User.objects.get(uid=request.data["user"])
+    print(user.__dict__)
     
     shop = Shop.objects.create(
       name = request.data["name"],
       location = request.data["location"],
       website = request.data["website"],
       photo = request.data["photo"],
-      user = user
+      user = user.uid
     )
     serializer = ShopSerializer(shop)
     return Response(serializer.data)
